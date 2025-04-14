@@ -41,11 +41,11 @@ close(VD);
 
 function [X, Y, Z] = SpringModel(r, a, b, p, n)
 
-th = linspace(0, 2*pi, 36); 
-ph = linspace(0, n*2*pi, 36*n);
-[Ph,Th] = meshgrid(ph, th); 
-X = (r + a.*cos(Th)).*cos(Ph);
-Y = (r + b.*cos(Th)).*sin(Ph);
-Z = a.*sin(Th) + p*Ph;
+    th = linspace(0, 2*pi, 36); 
+    ph = linspace(0, n*2*pi, 36*n);
+    [Ph,Th] = meshgrid(ph, th); 
+    X = (r + a.*cos(Th)).*cos(Ph);
+    Y = (r + b.*cos(Th)).*sin(Ph);
+    Z = a.*sin(Th) + p*Ph;
 
 end
